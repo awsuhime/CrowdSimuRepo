@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class sPEEDuP : MonoBehaviour
 {
@@ -21,6 +22,10 @@ public class sPEEDuP : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.F))
         {
             Time.timeScale = 1f;
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
